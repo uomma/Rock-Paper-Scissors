@@ -8,6 +8,8 @@ namespace Rock_Paper_Scissors
 {
     internal class Program
     {
+        private static object cw;
+
         static void Main(string[] args)
         {
             Random rand = new Random();
@@ -89,7 +91,7 @@ namespace Rock_Paper_Scissors
                 }
 
                 Console.WriteLine("You wan tto play again? (Y/N)");
-
+                
             }
 
             Console.ReadKey();
