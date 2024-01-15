@@ -13,7 +13,7 @@ namespace Rock_Paper_Scissors
             Random rand = new Random();
             bool PlayAgain = true;
             String player;
-            String cpu ;
+            String cpu;
 
             while (PlayAgain)
             {
@@ -25,7 +25,7 @@ namespace Rock_Paper_Scissors
                     Console.WriteLine("enter ROCK, PAPER, SCISSORS ");
                     player = Console.ReadLine();
                     player = player.ToUpper();
-                    
+
                 }
 
                 switch (rand.Next(1, 4))
@@ -42,6 +42,53 @@ namespace Rock_Paper_Scissors
                 }
                 Console.WriteLine("Player: " + player);
                 Console.WriteLine("Cpu: " + cpu);
+
+
+                switch (player)
+                {
+                    case "ROCK":
+                        if(cpu == "ROCK")
+                        {
+                            Console.WriteLine("draw");
+                        }else if(cpu == "PAPER")
+                        {
+                            Console.WriteLine("you lose");
+                        }else{
+                            Console.WriteLine("you win");
+                        }
+
+                        break;
+                    case "PAPER":
+                        if (cpu == "ROCK")
+                        {
+                            Console.WriteLine("you win");
+                        }
+                        else if (cpu == "PAPER")
+                        {
+                            Console.WriteLine("draw");
+                        }
+                        else
+                        {
+                            Console.WriteLine("you lose");
+                        }
+                        break;
+                    case "SCISSORS":
+                        if (cpu == "ROCK")
+                        {
+                            Console.WriteLine("you lose");
+                        }
+                        else if (cpu == "PAPER")
+                        {
+                            Console.WriteLine("you win");
+                        }
+                        else
+                        {
+                            Console.WriteLine("draw");
+                        }
+                        break;
+                }
+
+                Console.WriteLine("You wan tto play again? (Y/N)");
 
             }
 
