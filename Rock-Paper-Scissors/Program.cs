@@ -16,11 +16,14 @@ namespace Rock_Paper_Scissors
             bool PlayAgain = true;
             String player;
             String cpu;
+            String response;
 
             while (PlayAgain)
             {
                 player = "";
                 cpu = "";
+                response = "";
+
 
                 while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")
                 {
@@ -43,19 +46,22 @@ namespace Rock_Paper_Scissors
                         break;
                 }
                 Console.WriteLine("Player: " + player);
-                Console.WriteLine("Cpu: " + cpu);  
+                Console.WriteLine("Cpu: " + cpu);
 
 
                 switch (player)
                 {
                     case "ROCK":
-                        if(cpu == "ROCK")
+                        if (cpu == "ROCK")
                         {
                             Console.WriteLine("draw");
-                        }else if(cpu == "PAPER")
+                        }
+                        else if (cpu == "PAPER")
                         {
                             Console.WriteLine("you lose");
-                        }else{
+                        }
+                        else
+                        {
                             Console.WriteLine("you win");
                         }
 
@@ -91,7 +97,18 @@ namespace Rock_Paper_Scissors
                 }
 
                 Console.WriteLine("You wan tto play again? (Y/N)");
-                
+                response = Console.ReadLine();
+                response = response.ToUpper();
+
+                if (response == "Y")
+                {
+                    PlayAgain = true;
+                }
+                else if (response == "N")
+                {
+
+                    PlayAgain = false;
+                }
             }
 
             Console.ReadKey();
