@@ -110,6 +110,7 @@ namespace Rock_Paper_Scissors
                     PlayAgain = false;
                 }
             }
+            Console.WriteLine("thanks for playing");
 
             Console.ReadKey();
         }
