@@ -43,7 +43,7 @@ namespace Rock_Paper_Scissors
                         break;
                 }
                 Console.WriteLine("Player: " + player);
-                Console.WriteLine("Cpu: " + cpu);
+                Console.WriteLine("Cpu: " + cpu);  
 
 
                 switch (player)
